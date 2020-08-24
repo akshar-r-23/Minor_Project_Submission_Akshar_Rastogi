@@ -7,8 +7,6 @@ Original file is located at
     https://colab.research.google.com/drive/1uLas-p7DTGMiVNbFpZz74F0j8_iPE0ND
 """
 
-!pip install mglearn
-
 from sklearn.datasets import load_iris
 iris_data = load_iris()
 print('Success Importing Dataset')
@@ -23,8 +21,6 @@ print('Success')
 print('Keys of Datasets:\n{}'.format(iris_data.keys()))
 
 print(iris_data['DESCR'])
-
-
 
 print('Target_Names:\n{}'.format(iris_data['target_names']))
 
@@ -73,5 +69,5 @@ print('Predicted Target Name: {}'.format(iris_data['target_names'][prediction]))
 y_pred = knn.predict(X_test)
 print(y_pred)
 
-print('Test Accuracy:{:3f}'.format(np.mean(y_pred == y_test)*100))
+print('Test Accuracy Percentage:   {:3f}'.format(np.mean(y_pred == y_test)*100))
 
